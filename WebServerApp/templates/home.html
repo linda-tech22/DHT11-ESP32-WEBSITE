@@ -172,8 +172,9 @@
         // Function to fetch data from the server
         function fetchData() {
             $.ajax({
-                url: '/temperatures/',  // Ensure this URL matches the one in urls.py
+                url: 'http://your-esp32-ip-address/temperatures/', // Update with your ESP32 IP address and endpoint
                 method: 'GET',
+                dataType: 'json',
                 success: function (response) {
                     console.log("Data received:", response);
 
